@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>DFFOO Buddy</title>
+</head>
+<body>
+    <header>
+            <div class="logo-container">
+                <img src="img/banner/339.jpg" alt="logo">
+                <h4 class="logo">DFFOO Buddy</h4>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="#">Link 1</a></li>
+                    <li><a class="nav-link" href="#">Link 2</a></li>
+                    <li><a class="nav-link" href="#">Link 3</a></li>
+                </ul>
+            </nav>
+    </header>
+    <div style="display: block; margin-left: auto; margin-right: auto;">
+        <h1>Gacha Simulator</h1>
+        <button id="b1" onclick="changeText();">Button 1</button>
+        <p id="p1">PARAGRAPH</p>
+
+        <select name="cars" id="cars" onchange="selectBanner(this.value)">
+            <option value="339">Shantotto Banner 1</option>
+            <option value="340">Shantotto Banner 2</option>
+        </select>
+        
+        <img src="img/banner/339.jpg" id="banner" alt="ban" class="animation">
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
