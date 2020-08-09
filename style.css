@@ -4,15 +4,28 @@
     box-sizing: border-box;
 }
 
+body,
+select,
+button {
+    font-family: 'Alegreya Sans SC';
+}
+
 header {
-    display: flex;
     width: 90%;
     margin: auto;
     align-items: center;
 }
 
+div {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .logo-container,
 .nav-links {
+    justify-content: space-around;
     display: flex;
 }
 
@@ -23,10 +36,16 @@ header {
 .logo {
     font-weight: 400;
     margin: 5px;
+    max-width: 400px;
 }
 
 nav {
     flex: 1;
+}
+
+.nav-container {
+    margin: 10px;
+    display: none;
 }
 
 .nav-links {
@@ -39,8 +58,23 @@ nav {
     text-decoration: none;
 }
 
-#banner {
-    
+.banner-container {
+    display: flex;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.banner {
+    max-width: 700px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.banner-buttons {
+    display: flex;
 }
 
 .animation {
@@ -50,10 +84,39 @@ nav {
 @keyframes drop {
     0% {
         opacity: 0;
-        transform: translateY(-40px);
+        transform: translateY(-20px);
     }
     100% {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+select {
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 0;
+    background-color: #e5191c;
+    border: none;
+    border-bottom: 4px solid black;
+    color: white;
+    padding: 10px;
+    padding-right: 38px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Adding transition effect */
+    transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+}
+/* For IE <= 11 */
+select::-ms-expand {
+    display: none; 
+}
+select:hover,
+select:focus {
+    color: whitesmoke;
+    background-color: black;
+    border-bottom-color: #e5191c;
 }

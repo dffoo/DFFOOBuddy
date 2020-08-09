@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
     <link rel="stylesheet" href="./style.css">
     <title>DFFOO Buddy</title>
 </head>
 <body>
     <header>
             <div class="logo-container">
-                <img src="img/banner/339.jpg" alt="logo">
-                <h4 class="logo">DFFOO Buddy</h4>
+                <img src="img/logo.png" class="logo" alt="DFOOO Buddy">
             </div>
-            <nav>
+            <nav class="nav-container">
                 <ul class="nav-links">
-                    <li><a class="nav-link" href="#">Link 1</a></li>
-                    <li><a class="nav-link" href="#">Link 2</a></li>
-                    <li><a class="nav-link" href="#">Link 3</a></li>
+                    <li><a class="nav-link" href="#">Gacha Simulator</a></li>
                 </ul>
             </nav>
     </header>
-    <div style="display: block; margin-left: auto; margin-right: auto;">
-        <h1>Gacha Simulator</h1>
-        <button id="b1" onclick="changeText();">Button 1</button>
-        <p id="p1">PARAGRAPH</p>
-
+    <div class="banner-container">
         <select name="cars" id="cars" onchange="selectBanner(this.value)">
             <option value="339">Shantotto Banner 1</option>
             <option value="340">Shantotto Banner 2</option>
         </select>
-        
-        <img src="img/banner/339.jpg" id="banner" alt="ban" class="animation">
+    </div>
+    <div class="banner">
+        <img src="img/banner/339.jpg" id="img-banner" alt="ban" class="animation responsive">
+    </div>
+    <div class="banner-buttons">
+        <button id="b1" onclick="changeText();">Button 1</button>
+    </div>
+    <div>
+        <p id="p1">PARAGRAPH</p>
+        <p id="p2">PARAGRAPH</p>
+        <p id="p3">PARAGRAPH</p>
+    </div>
+    <div>
     </div>
     <script src="./script.js"></script>
 </body>
