@@ -35,9 +35,8 @@ div {
 
 .logo {
     font-weight: 400;
-    margin: 5px;
-    margin-bottom: 30px;
-    max-width: 350px;
+    margin: 10px;
+    max-width: 250px;
 }
 
 nav {
@@ -137,9 +136,12 @@ select:focus {
 	text-decoration:none;
 }
 .btn-gacha:hover {
-	background-color:#630202;
+	background-color:black;
 }
 .btn-gacha:active {
 	position:relative;
 	top:5px;
+}
+.btn-gacha:focus {
+    outline: 0px;
 }
