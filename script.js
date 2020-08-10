@@ -10,6 +10,44 @@ function changeText() {
     // alert("test");
 }
 
+function generateMultiPull() {
+    const sortBy = {
+        'BRONZE' : 0,
+        'SILVER' : 1,
+        'GOLD' : 2,
+        'BURST' : 3
+    }
+
+    var arrPull = [];
+    var i;
+    for (i=0; i<10; i++){
+        // arrPull.push(Math.floor(Math.random() * 1001));
+        arrPull.push(getWeapon((Math.floor(Math.random() * 1000) + 1)));
+    }
+    // arrPull.sort();
+    // arrPull.sort(function(a, b) {
+    //     return a - b;
+    // });
+
+    const result = arrPull.sort(
+        (a, b) => sortBy[a] - sortBy[b]
+    )
+    // console.log(arrPull);
+    return arrPull;
+}
+
+function getWeapon(i) {
+    if(i < 600) {
+        return "BRONZE";
+    } else if(i < 900) {
+        return "SILVER";
+    } else if(i < 1000) {
+        return "GOLD";
+    } else {
+        return "BURST";
+    }
+}
+
 function selectBanner(value) {
     var filename = `img/banner/${value}.jpg`;
     document.getElementById('img-banner').src = filename;
@@ -49,6 +87,20 @@ function pullMulti() {
 function drawMulti() {
     $(".btn-gacha").prop('disabled', true);
     $(".pull-img").css("opacity", 0);
+
+    var i;
+    var arrPull = generateMultiPull();
+    for (i=0;i<10;i++){
+        if(arrPull[i] == "BRONZE"){
+            document.getElementById("pull"+i).src = "img/eq/Bronze.png";
+        } else if(arrPull[i] == "SILVER"){
+            document.getElementById("pull"+i).src = "img/eq/Silver.png";
+        } else {
+            document.getElementById("pull"+i).src = "img/eq/Gold.png";
+        }
+        console.log(arrPull[i]);
+    }
+
     $("#div-pull-multi").animate({opacity: 1});
     var delay = 0;
     $(".pull-img").each(function(i) {
@@ -75,7 +127,14 @@ function drawMulti() {
 //     });
 // });
 
-$("#b2").click(function(){
+$("#btn-single").click(function(){
     // $("#div-pull-multi").animate({top: "+=100px"});
-    $("#div-pull-multi").show();
+    // $("#div-pull-multi").show();
+    // generateMultiPull();
+    // var arr = generateMultiPull();
+    // console.log(arr);
+    var i;
+    for(i=0;i<10;i++){
+        console.log(document.getElementById("pull"+i).src);
+    }
 });
