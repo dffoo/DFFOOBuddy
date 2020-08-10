@@ -40,6 +40,7 @@ function drawSingle() {
 }
 
 function pullMulti() {
+    document.getElementById("div-pull-multi").style.display = "flex";
     var banner = document.getElementById("select-banner").value;
     if(getComputedStyle(document.getElementById("div-pull-multi"), null).opacity == 1) {
         $("#div-pull-multi").animate({opacity: 0}, 250);

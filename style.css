@@ -173,7 +173,7 @@ select:focus {
 }
 
 #div-pull-multi {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 90%;
     max-width: 800px;
@@ -189,4 +189,13 @@ select:focus {
 
 #pull10 {
     width: 180px;
+}
+
+footer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 10px;
 }
