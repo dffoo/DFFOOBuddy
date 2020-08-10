@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+div#preload { display: none; }
+
+body {
+    /* Location of the image */
+    background-image: url(img/bg.png);
+    
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+    
+    /* Background image doesn't tile */
+    background-repeat: no-repeat;
+    
+    /* Background image is fixed in the viewport so that it doesn't move when 
+       the content's height is greater than the image's height */
+    background-attachment: fixed;
+    
+    /* This is what makes the background image rescale based
+       on the container's size */
+    background-size: cover;
+    
+    /* Set a background color that will be displayed
+       while the background image is loading */
+    background-color: black;
+}
+
 body,
 select,
 button {
@@ -73,11 +98,6 @@ nav {
     margin-bottom: 5px;
 }
 
-.banner-buttons {
-    display: flex;
-    justify-content: center;
-}
-
 .animation {
     animation: drop 1s ease;
 }
@@ -122,18 +142,24 @@ select:focus {
     border-bottom-color: #e5191c;
 }
 
+.banner-buttons {
+    display: flex;
+    max-width: 600px;
+}
+
 .btn-gacha {
 	box-shadow:inset 0px 50px 40px 0px #e5191d;
 	background-color:#e5191d;
 	border-radius:6px;
-	border:1px solid #ffffff;
+    border:2px none black;
+    border-bottom: 4px solid black;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-    font-size:20px;
-    width: 350px;
+    font-size:18px;
+    width: 200px;
     height: 50px;
-	text-decoration:none;
+    text-decoration:none;
 }
 .btn-gacha:hover {
 	background-color:black;
@@ -146,6 +172,16 @@ select:focus {
     outline: 0px;
 }
 
+#div-pull-multi {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+}
+
 .pull-img {
     width: 150px;
+    height: auto;
+    padding: 3px;
 }

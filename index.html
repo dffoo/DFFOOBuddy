@@ -34,13 +34,8 @@
     </div>
     
     <div class="banner-buttons">
-        <button id="b1" class="btn-gacha">Single Draw (500 Gems)</button>
-        <button id="b2" class="btn-gacha">Multi Draw 10+1 (5,000 Gems)</button>
-    </div>
-    <div>
-        <p id="p1">PARAGRAPH</p>
-        <p id="p2">PARAGRAPH</p>
-        <p id="p3">PARAGRAPH</p>
+        <button id="btn-single" class="btn-gacha">Single Draw<br>(500 Gems)</button>
+        <button id="btn-multi" class="btn-gacha" onclick="pullMulti();">Multi Draw 10+1<br>(5,000 Gems)</button>
     </div>
     <div id="div-pull-multi">
         <img id="pull0" class="pull-img" src="img/eq/Bronze.png" alt="Bronze">
@@ -55,7 +50,60 @@
         <img id="pull9" class="pull-img" src="img/eq/Bronze.png" alt="Bronze">
         <img id="pull10" class="pull-img" src="img/eq/Bronze.png" alt="Bronze">
     </div>
-    fjdlaks
+    <div id="preload">
+        <img src="img/banner/339.jpg">
+        <img src="img/banner/340.jpg">
+        <img src="img/banner/341.jpg">
+        <img src="img/banner/342.jpg">
+        <img src="img/banner/343.jpg">
+        <img src="img/banner/344.jpg">
+    </div>
+    </div>
     <script src="./script.js"></script>
+
+    <script language="JavaScript">
+        /**
+          * Disable right-click of mouse, F12 key, and save key combinations on page
+          * By Arthur Gareginyan (https://www.arthurgareginyan.com)
+          * For full source code, visit https://mycyberuniverse.com
+          */
+        window.onload = function() {
+          document.addEventListener("contextmenu", function(e){
+            e.preventDefault();
+          }, false);
+          document.addEventListener("keydown", function(e) {
+          //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          }, false);
+          function disabledEvent(e){
+            if (e.stopPropagation){
+              e.stopPropagation();
+            } else if (window.event){
+              window.event.cancelBubble = true;
+            }
+            e.preventDefault();
+            return false;
+          }
+        };
+      </script>
 </body>
 </html>
