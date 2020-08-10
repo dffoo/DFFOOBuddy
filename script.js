@@ -16,6 +16,7 @@ function selectBanner(value) {
     document.getElementById('img-banner').classList.remove("animation");
     void document.getElementById('img-banner').offsetWidth;
     document.getElementById('img-banner').classList.add("animation");
+    document.getElementById('select-banner').blur();
 }
 
 function loadBanners() {

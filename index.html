@@ -19,7 +19,7 @@
             </nav>
     </header>
     <div class="banner-container">
-        <select name="cars" id="cars" onchange="selectBanner(this.value)">
+        <select name="cars" id="select-banner" onchange="selectBanner(this.value)">
             <option value="339">Shantotto Banner 1</option>
             <option value="340">Shantotto Banner 2</option>
         </select>
@@ -27,8 +27,10 @@
     <div class="banner">
         <img src="img/banner/339.jpg" id="img-banner" alt="ban" class="animation responsive">
     </div>
+    
     <div class="banner-buttons">
-        <button id="b1" onclick="changeText();">Button 1</button>
+        <button id="b1" class="btn-gacha" onclick="changeText();">Single Draw (500 Gems)</button>
+        <button id="b1" class="btn-gacha" onclick="changeText();">Multi Draw 10+1 (5,000 Gems)</button>
     </div>
     <div>
         <p id="p1">PARAGRAPH</p>
