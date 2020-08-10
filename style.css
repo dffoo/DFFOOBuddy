@@ -180,6 +180,10 @@ select:focus {
     outline: 0px;
 }
 
+#btn-single {
+    width:
+}
+
 #div-pull-multi {
     display: none;
     flex-wrap: wrap;
@@ -206,4 +210,5 @@ footer {
     text-align: center;
     justify-content: space-around;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
