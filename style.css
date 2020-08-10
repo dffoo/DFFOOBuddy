@@ -178,10 +178,15 @@ select:focus {
     width: 90%;
     max-width: 800px;
     padding: 10px;
+    opacity: 0;
 }
 
 .pull-img {
     width: 150px;
     height: auto;
     padding: 3px;
+}
+
+#pull10 {
+    width: 180px;
 }

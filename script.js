@@ -10,44 +10,6 @@ function changeText() {
     // alert("test");
 }
 
-function generateMultiPull() {
-    const sortBy = {
-        'BRONZE' : 0,
-        'SILVER' : 1,
-        'GOLD' : 2,
-        'BURST' : 3
-    }
-
-    var arrPull = [];
-    var i;
-    for (i=0; i<10; i++){
-        // arrPull.push(Math.floor(Math.random() * 1001));
-        arrPull.push(getWeapon((Math.floor(Math.random() * 1000) + 1)));
-    }
-    // arrPull.sort();
-    // arrPull.sort(function(a, b) {
-    //     return a - b;
-    // });
-
-    const result = arrPull.sort(
-        (a, b) => sortBy[a] - sortBy[b]
-    )
-    // console.log(arrPull);
-    return arrPull;
-}
-
-function getWeapon(i) {
-    if(i < 600) {
-        return "BRONZE";
-    } else if(i < 900) {
-        return "SILVER";
-    } else if(i < 1000) {
-        return "GOLD";
-    } else {
-        return "BURST";
-    }
-}
-
 function selectBanner(value) {
     var filename = `img/banner/${value}.jpg`;
     document.getElementById('img-banner').src = filename;
@@ -78,27 +40,30 @@ function drawSingle() {
 }
 
 function pullMulti() {
+    var banner = document.getElementById("select-banner").value;
     if(getComputedStyle(document.getElementById("div-pull-multi"), null).opacity == 1) {
         $("#div-pull-multi").animate({opacity: 0}, 250);
     }
-    setTimeout(() => { drawMulti(); }, 250);
+    setTimeout(() => { drawMulti(banner); }, 250);
 }
 
-function drawMulti() {
+function drawMulti(banner) {
     $(".btn-gacha").prop('disabled', true);
     $(".pull-img").css("opacity", 0);
 
     var i;
     var arrPull = generateMultiPull();
-    for (i=0;i<10;i++){
-        if(arrPull[i] == "BRONZE"){
-            document.getElementById("pull"+i).src = "img/eq/Bronze.png";
-        } else if(arrPull[i] == "SILVER"){
-            document.getElementById("pull"+i).src = "img/eq/Silver.png";
+    for (i=0;i<arrPull.length;i++){
+        if(arrPull[i] == "bronze"){
+            document.getElementById("pull"+i).src = "img/eq/bronze.png";
+        } else if(arrPull[i] == "silver"){
+            document.getElementById("pull"+i).src = "img/eq/silver.png";
+        } else if(arrPull[i] == "gold"){
+            document.getElementById("pull"+i).src = "img/eq/gold.png";
         } else {
-            document.getElementById("pull"+i).src = "img/eq/Gold.png";
+            document.getElementById("pull"+i).src = "img/"+banner+"/"+arrPull[i]+".png";
         }
-        console.log(arrPull[i]);
+        // console.log(arrPull[i]);
     }
 
     $("#div-pull-multi").animate({opacity: 1});
@@ -111,6 +76,108 @@ function drawMulti() {
         });
         delay += 250;
     });
+}
+
+
+function generateMultiPull() {
+    const sortBy = {
+        'bronze' : 0,
+        'silver' : 1,
+        'gold' : 2,
+        'burst' : 3
+    }
+
+    var arrPull = [];
+    var i;
+    for (i=0; i<10; i++){
+        arrPull.push(getWeapon((Math.floor(Math.random() * 1000) + 1))); // 1-1000
+    }
+    // arrPull.sort();
+    // arrPull.sort(function(a, b) {
+    //     return a - b;
+    // });
+
+    // sort array by weapon rarity
+    const result = arrPull.sort(
+        (a, b) => sortBy[a] - sortBy[b]
+    )
+    
+    // loop through array and randomize gold weapons
+    for (i=0;i<result.length;i++) {
+        if(result[i] == "gold") {
+            var gold = (Math.floor(Math.random() * 1001) + 1); // 1-1001
+            if(gold < 143) {
+                result[i] = "15a";
+            } else if(gold < 285) {
+                result[i] = "15b";
+            } else if(gold < 427) {
+                result[i] = "15c";
+            } else if(gold < 527) {
+                result[i] = "35a";
+            } else if(gold < 627) {
+                result[i] = "35b";
+            } else if(gold < 727) {
+                result[i] = "35c";
+            } else if(gold < 802) {
+                result[i] = "exa";
+            } else if(gold < 877) {
+                result[i] = "exb";
+            } else if(gold < 952) {
+                result[i] = "exc";
+            } else {
+                result[i] = "ld";
+            }
+        }
+    }
+
+    // +1 bonus weapon
+    arrPull.push(getBonusWeapon((Math.floor(Math.random() * 100) + 1))); // 1-100
+    if(result[10] == "gold") {
+        var gold = (Math.floor(Math.random() * 1001) + 1); // 1-1001
+        if(gold < 143) {
+            result[10] = "15a";
+        } else if(gold < 285) {
+            result[10] = "15b";
+        } else if(gold < 427) {
+            result[10] = "15c";
+        } else if(gold < 527) {
+            result[10] = "35a";
+        } else if(gold < 627) {
+            result[10] = "35b";
+        } else if(gold < 727) {
+            result[10] = "35c";
+        } else if(gold < 802) {
+            result[10] = "exa";
+        } else if(gold < 877) {
+            result[10] = "exb";
+        } else if(gold < 952) {
+            result[10] = "exc";
+        } else {
+            result[10] = "ld";
+        }
+    }
+
+    return arrPull;
+}
+
+function getWeapon(i) {
+    if(i < 600) {
+        return "bronze";
+    } else if(i < 900) {
+        return "silver";
+    } else if(i < 1000) {
+        return "gold";
+    } else {
+        return "burst";
+    }
+}
+
+function getBonusWeapon(i) {
+    if(i < 98) {
+        return "gold";
+    } else {
+        return "burst";
+    }
 }
 
 // $("#b1").click(drawMulti());
