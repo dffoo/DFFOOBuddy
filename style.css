@@ -145,3 +145,7 @@ select:focus {
 .btn-gacha:focus {
     outline: 0px;
 }
+
+.pull-img {
+    width: 150px;
+}

@@ -33,3 +33,47 @@ function loadBanners() {
 
     body.appendChild(tbl);
 }
+
+function drawSingle() {
+    // document.getElementById('div-pull-multi').hidden = true;
+    // document.getElementById('div-pull-multi').hide();
+}
+
+function drawMulti() {
+    document.getElementById('div-pull-multi').hidden = false;
+}
+
+$("#b1").click(function(){
+    // $("#div-pull-multi").slideUp(250, 0.0);
+    
+    var count = 11;
+    var delay = 0;
+    $(".pull-img").each(function(i) {
+        $(this).delay(delay).animate({opacity: 0}, 500, function() {
+            if(i==10) {
+                $("#div-pull-multi").hide();    
+            }
+        });
+        delay += 250;
+    });
+
+    // $(".pull-img").each(function() {
+    //     $(this).animate({opacity: 0}, 500, function() {
+    //         $("#div-pull-multi").hide();
+    //     });
+    // });
+
+    // $("#div-pull-multi").closest(".pull-img").animate({opacity: 0}, 500, function() {
+    //     $("#div-pull-multi").hide();
+    // })
+    // $("#div-pull-multi").closest(".pull-img").animate({
+    //     opacity: 0
+    // }, 500, function() {
+    //     $("#div-pull-multi").hide();
+    // });
+});
+
+$("#b2").click(function(){
+    // $("#div-pull-multi").animate({top: "+=100px"});
+    $("#div-pull-multi").show(250, 0.0);
+});
