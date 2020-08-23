@@ -11,8 +11,8 @@ $(function() {
                 var allText = csvfile.responseText; 
                 bannerFile = csvfile.responseText.split("\n");
             }
-            loadDefaultBanner("342");
-            console.log(selectedBannerValues);
+            loadDefaultBanner(bannerFile[0].split("=")[1]);
+            // console.log(selectedBannerValues);
         }
     };
     csvfile.send();
@@ -42,8 +42,9 @@ function selectBanner(value) {
 
 function getBannerValues(selectedBanner) {
     var i;
-    for (i=0;i<bannerFile.length;i++){
-        if(bannerFile[i].includes(selectedBanner)) {
+    var banner = Number(selectedBanner);
+    for (i=1;i<bannerFile.length;i++){
+        if(bannerFile[i].includes(banner)) {
             return bannerFile[i].split(",");
         }
     }

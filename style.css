@@ -423,6 +423,7 @@ Pull stats header and options go here
     font-size: 30px;
     font-weight: bold;
     padding-bottom: 5px;
+    justify-content: space-evenly;
 }
 
 .btn-stats-option {
@@ -453,8 +454,8 @@ Pull stats header and options go here
 
 @media only screen and (max-width: 475px) {
     .btn-stats-option {
-        min-width: 130px;
-        font-size: 12px;
+        min-width: 100px;
+        font-size: 11px;
     }
 }
 
