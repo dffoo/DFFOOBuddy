@@ -1,0 +1,15 @@
+8/19
+- Auto Pull feature added
+- Various community resource links added
+
+8/16
+- Added labels for Gold and Burst weapons
+- Rates section hidden by default. Use the toggle button to show rates
+- Added toggle buttons for the rates section and the weapon labels
+
+8/13
+- Tweaked the rates for the bonus weapon pull by a little bit to reflect correct probabilities. Thanks to u/calculator154 for pointing this one out!
+- Added button to reset stats and toggle single/multi stats
+
+8/11
+- Added Pull Stats section. This shows a summary of your current session and represents your total pulls, regardless of which banner you are currently in. Simply refresh the page to reset the stats!
