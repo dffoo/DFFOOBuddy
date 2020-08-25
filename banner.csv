@@ -1,8 +1,14 @@
-current=342
+current=343
 Banner,Char1,Char2,Char3,LD,Burst
-339,Shantotto,Alisaie,Eiko,Shantotto,Shantotto
-340,Lulu,Porom,Krile,Shantotto,Shantotto
-341,Squall,Ultimecia,Paine,Ultimecia,Shantotto
-342,Desch,Onion Knight,Yang,Desch,Shantotto
 343,Vaan,Balthier,Gabranth,Vaan,Vaan
 344,Lenna,Wakka,Locke,Vaan,Vaan
+345,Cid,Rem,Machina,Machina,Vaan
+346,Vivi,Leon,Arciela,None,Vaan
+347,Paladin Cecil,Fang,Noctis,Noctis,Noctis
+348,Irvine,Fran,Seven,Noctis,Noctis
+349,Vaan,Basch,Serah,Basch,Noctis
+350,Barret,Fujin,Nine,Nine,Noctis
+351,Maria,Lilisette,Ardyn,Ardyn,Ardyn
+352,Kain,Rinoa,Alphinaud,Rinoa,Ardyn
+353,Yuna,Kimahri,Noel,Kimahri,Ardyn
+354,Palom,Edward,Hope,Edward,Ardyn
