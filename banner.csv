@@ -1,14 +1,10 @@
-current=351
+current=352
 Banner,Char1,Char2,Char3,LD,Burst
-343,Vaan,Balthier,Gabranth,Vaan,Vaan
-344,Lenna,Wakka,Locke,Vaan,Vaan
-345,Cid,Rem,Machina,Machina,Vaan
-346,Vivi,Leon,Arciela,None,Vaan
-347,Paladin Cecil,Fang,Noctis,Noctis,Noctis
-348,Irvine,Fran,Seven,Noctis,Noctis
-349,Vaan,Basch,Serah,Basch,Noctis
-350,Barret,Fujin,Nine,Nine,Noctis
 351,Maria,Lilisette,Ardyn,Ardyn,Ardyn
 352,Kain,Rinoa,Alphinaud,Rinoa,Ardyn
 353,Yuna,Kimahri,Noel,Kimahri,Ardyn
 354,Palom,Edward,Hope,Edward,Ardyn
+355,Shadow,Kefka,Aerith,Kefka,Kefka
+356,Freya,Seymour,Lyse,Kefka,Kefka
+357,Firion,Emperor,Gilgamesh,Emperor,Kefka
+358,Relm,Strago,Ashe,Strago,Kefka
