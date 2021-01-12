@@ -1,10 +1,6 @@
-current=375
+current=379
 Banner,Char1,Char2,Char3,LD,Burst
-371,Sephiroth,Snow,Sazh,Sephiroth,Sephiroth
-372,Jecht,Galuf,Ignis,Sephiroth,Sephiroth
-373,Ciaran,Layle,Krile,Ciaran,Sephiroth
-374,Rude,Yuffie,Lann&Reyn,Rude,Sephiroth
-375,Setzer,Cloud,Rem,Cloud,Cloud
-376,Celes,Wakka,Yuri,Cloud,Cloud
-377,Steiner,Beatrix,Vanille,Beatrix,Cloud
-378,Xande,Zell,Eiko,Xande,Cloud
+379,Firion,Golbez,Faris,Firion,Firion
+380,Lenna,Irvine,Fujin,Firion,Firion
+381,Warrior of Light,Gilgamesh,Exdeath,Exdeath,Firion
+382,Leon,Dark Knight Cecil,Kain,Dark Knight Cecil,Firion
