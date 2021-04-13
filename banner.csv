@@ -1,11 +1,9 @@
-current=392
+current=405
 Banner,Char1,Char2,Char3,LD,Burst
-387,Cyan,Penelo,Thancred,Penelo,Ultimecia
-388,Palom,Ultimecia,Papalymo,Ultimecia,Ultimecia
-389,Ignis,Ramza,Jack,Jack,Ultimecia
-390,Krile,Relm,Aphmau,Krile,Ultimecia
-391,Cloud of Darkness,Shadow,Hope,Hope,Ultimecia
-392,Onion Knight,Snow,Cater,Onion Knight,Onion Knight
-393,Gau,Sazh,Alisaie,Gau,Onion Knight
-394,Rinoa,Prishe,Arciela,Arciela,Onion Knight
-395,Ceodore,Cid,Alphinaud,Ceodore,Onion Knight
+404,Sabin,Kuja,Lilisette,Kuja,Y'shtola
+405,Fujin,Balthier,Y'shtola,Y'shtola,Y'shtola
+406,Quistis,Fran,Trey,Trey,Y'shtola
+407,Setzer,Wakka,Sherlotta,Wakka,Y'shtola
+408,Porom,Terra,Vanille,Terra,Terra
+409,Rydia,Basch,Vayne,Basch,Terra
+411,Kain,Mog,Vincent,Mog,Terra
